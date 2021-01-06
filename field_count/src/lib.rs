@@ -20,6 +20,10 @@ pub trait FieldCount {
     fn field_count() -> usize;
 }
 
+#[macro_use]
+#[allow(unused_imports)]
+extern crate field_count_derive;
+
 // Export derive macro from derive crate.
 pub use field_count_derive::*;
 

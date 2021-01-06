@@ -11,7 +11,7 @@ pub fn derive_field_count(input: TokenStream) -> TokenStream {
     let field_count = input.fields.iter().count();
 
     let output = quote! {
-        impl #impl_generics FieldCount for #name #ty_generics #where_clause {
+        impl #impl_generics ::field_count::FieldCount for #name #ty_generics #where_clause {
             fn field_count() -> usize {
                 #field_count
             }
